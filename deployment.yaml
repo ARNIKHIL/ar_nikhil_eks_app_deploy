@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: arnikhil-app
+  name: arnikhil-app
+  namespace: arnikhil-space
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: arnikhil-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: arnikhil-app
+    spec:
+      containers:
+      - image: arnikhil123/arnikhil_cisco_app_2:v7
+        name: arnikhil-cisco-app-2-9hvt2
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
